@@ -1,0 +1,42 @@
+version: '3'
+services:
+  book-list:
+    image: node:13-alpine
+    command: npm start
+    working_dir: /home/node/app
+    volumes: 
+      - ./book-list:/home/node/app
+  book-detail:
+    image: node:13-alpine
+    command: npm start
+    working_dir: /home/node/app
+    volumes: 
+      - ./book-detail:/home/node/app
+  footer:
+    image: node:13-alpine
+    command: npm start
+    working_dir: /home/node/app
+    volumes: 
+      - ./footer:/home/node/app
+  book-api:
+    image: node:13-alpine
+    command: npm start
+    working_dir: /home/node/app
+    volumes: 
+      - ./book-api:/home/node/app
+  kong:
+    image: kong:1.4.2-alpine
+    environment:
+      KONG_DATABASE: "off"
+      KONG_DECLARATIVE_CONFIG: /usr/local/kong/declarative/kong.yml
+      KONG_LUA_PACKAGE_PATH: /usr/local/kong/declarative/?.lua;;
+      KONG_CUSTOM_PLUGINS: bundled,my-custom-plugin
+      KONG_PROXY_ACCESS_LOG: /dev/stdout
+      KONG_ADMIN_ACCESS_LOG: /dev/stdout 
+      KONG_PROXY_ERROR_LOG: /dev/stderr 
+      KONG_ADMIN_ERROR_LOG: /dev/stderr
+    volumes:
+      - ./kong:/usr/local/kong/declarative
+    ports:
+      - "8001:8001"
+      - "8000:8000"

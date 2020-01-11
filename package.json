@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "install:book-api": "npm install ./book-api",
+        "install:book-detail": "npm install ./book-detail",
+        "install:book-list": "npm install ./book-list",
+        "install:footer": "npm install ./footer",
+        "install": "npm run install:book-api && npm run install:book-detail && npm run install:book-list && npm run install:footer"
+    },
+    "dependencies": {
+        "book-api": "file:book-api",
+        "book-detail": "file:book-detail",
+        "book-list": "file:book-list",
+        "footer": "file:footer"
+    }
+}

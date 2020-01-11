@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= book.name %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1><%= book.name %></h1>
+  <dl>
+    <dt>Author</dt>
+    <dd><%= book.author %></dd>
+    <dt>Pages</dt>
+    <dd><%= book.pages %></dd>
+  </dl>
+</body>
+
+<%- footer %>
+
+</html>

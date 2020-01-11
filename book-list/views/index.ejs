@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Books</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1>Books</h1>
+  <% books.forEach(book => { %>
+  <p><a href="/book/<%= book.id %>"><%= book.name %></a></p>
+  <%}) %>
+</body>
+
+<%- footer %>
+
+</html>

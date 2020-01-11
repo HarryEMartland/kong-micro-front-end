@@ -1,0 +1,18 @@
+_format_version: "1.1"
+
+services:
+- name: book-detail
+  url: http://book-detail:3000
+  routes:
+    - name: detail
+      paths:
+        - /book/\d+
+      strip_path: false
+- name: book-list
+  url: http://book-list:3000
+  routes:
+    - name: list
+      paths:
+        - /
+  plugins:
+    - name: my-custom-plugin

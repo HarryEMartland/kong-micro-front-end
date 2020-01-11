@@ -11,13 +11,4 @@ A docker-compose file is provided in the root of this project. Install Docker an
 
 The book data is provided by `book-api` which is used by both front ends. The root list view and the book detail view are both seporate applications called `book-list` and `book-detail` respectivly. Both view services have a footer component, this is provided by `footer`. `footer` returns partial HTML, services request this content and embed it in their response HTML.
 
-```mermaid
-graph TD
-A(Browser) --> B[Kong]
-B --> C[book-list]
-C --> E[footer]
-C --> F[book-api]
-B --> D[book-detail]
-D --> E
-D --> F
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcbkEoQnJvd3NlcikgLS0-IEJbS29uZ11cbkIgLS0-IENbYm9vay1saXN0XVxuQyAtLT4gRVtmb290ZXJdXG5DIC0tPiBGW2Jvb2stYXBpXVxuQiAtLT4gRFtib29rLWRldGFpbF1cbkQgLS0-IEVcbkQgLS0-IEZcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcbkEoQnJvd3NlcikgLS0-IEJbS29uZ11cbkIgLS0-IENbYm9vay1saXN0XVxuQyAtLT4gRVtmb290ZXJdXG5DIC0tPiBGW2Jvb2stYXBpXVxuQiAtLT4gRFtib29rLWRldGFpbF1cbkQgLS0-IEVcbkQgLS0-IEZcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In19)

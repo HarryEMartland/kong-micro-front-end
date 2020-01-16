@@ -3,15 +3,15 @@ services:
   book-list:
     image: node:13-alpine
     command: npm start
-    working_dir: /home/node/app
+    working_dir: /home/node/app/book-list
     volumes: 
-      - ./book-list:/home/node/app
+      - ./:/home/node/app
   book-detail:
     image: node:13-alpine
     command: npm start
-    working_dir: /home/node/app
+    working_dir: /home/node/app/book-detail
     volumes: 
-      - ./book-detail:/home/node/app
+      - ./:/home/node/app
   footer:
     image: node:13-alpine
     command: npm start

@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <h1>Books</h1>
+  <%- header %>
   <% books.forEach(book => { %>
   <p><a href="/book/<%= book.id %>"><%= book.name %></a></p>
   <%}) %>

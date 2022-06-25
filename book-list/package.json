@@ -15,6 +15,6 @@
     "header": "file:../header",
     "http-errors": "~1.7.3",
     "morgan": "~1.9.1",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.7"
   }
 }
